@@ -8,29 +8,120 @@
 import XCTest
 @testable import CocktailUp
 
-final class CocktailUpTests: XCTestCase {
+@MainActor
+final class ViewModelTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testFetchCocktails() {
+        let expectation = XCTestExpectation(description: "Fetch cocktails")
+        let searchText = "test"
+        let url = "https://example.com/api/cocktails"
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        let service = MockSevice()
+        service.dataMock = .goodData
+        let viewModel = ViewModel(service: service)
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        viewModel.fetchCocktails(searchText: searchText, url: url)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertEqual(viewModel.drinks.drinks.first?.idDrink, "11007")
+            XCTAssertNil(viewModel.error)
+            expectation.fulfill()
         }
+
+        wait(for: [expectation], timeout: 2.0)
     }
 
+    func testFetchCocktailsWithBadData() {
+        let expectation = XCTestExpectation(description: "Fetch cocktails")
+        let searchText = "test"
+        let url = "https://example.com/api/cocktails"
+
+        let service = MockSevice()
+        service.dataMock = .badData
+        let viewModel = ViewModel(service: service)
+
+        viewModel.fetchCocktails(searchText: searchText, url: url)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertEqual(viewModel.drinks.drinks.first?.idDrink, nil)
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 2.0)
+    }
+
+    func testFetchCocktailsWithNetworkError() {
+        let expectation = XCTestExpectation(description: "Fetch cocktails with network error")
+        let searchText = "test"
+        let url = "https://example.com/api/cocktails"
+
+        let service = MockServiceWithNetworkError()
+        let viewModel = ViewModel(service: service)
+
+        viewModel.fetchCocktails(searchText: searchText, url: url)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertNotNil(viewModel.error)
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 2.0)
+    }
+
+    func testFetchRandomCocktails() {
+        let expectation = XCTestExpectation(description: "Fetch cocktails")
+        let searchText = "test"
+        let url = "https://example.com/api/cocktails"
+
+        let service = MockSevice()
+        service.dataMock = .goodData
+        let viewModel = ViewModel(service: service)
+
+        viewModel.fetchRandomCocktail()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertEqual(viewModel.drinks.drinks.first?.idDrink, "11007")
+            XCTAssertNil(viewModel.error)
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 2.0)
+    }
+
+    func testFetchRandomCocktailsWithBadData() {
+        let expectation = XCTestExpectation(description: "Fetch cocktails")
+        let searchText = "test"
+        let url = "https://example.com/api/cocktails"
+
+        let service = MockSevice()
+        service.dataMock = .badData
+        let viewModel = ViewModel(service: service)
+
+        viewModel.fetchRandomCocktail()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertEqual(viewModel.drinks.drinks.first?.idDrink, nil)
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 2.0)
+    }
+
+    func testFetchRandomCocktailsWithNetworkError() {
+        let expectation = XCTestExpectation(description: "Fetch cocktails with network error")
+        let searchText = "test"
+        let url = "https://example.com/api/cocktails"
+
+        let service = MockServiceWithNetworkError()
+        let viewModel = ViewModel(service: service)
+
+        viewModel.fetchRandomCocktail()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertNotNil(viewModel.error)
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 2.0)
+    }
 }
