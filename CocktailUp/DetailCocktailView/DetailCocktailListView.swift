@@ -13,8 +13,8 @@ struct DetailCocktailListView: View {
     var body: some View {
         if let inscruction = inscruction {
             Text(inscruction)
-                  .fontWeight(.bold)
-                  .padding()
+                .fontWeight(.bold)
+                .padding()
         }
     }
 }

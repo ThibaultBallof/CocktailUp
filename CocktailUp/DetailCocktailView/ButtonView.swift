@@ -13,7 +13,6 @@ struct ButtonView: View {
     var body: some View {
         HStack {
             Spacer()
-
             Button {
                 viewModel.selectedButton = .instruction
 

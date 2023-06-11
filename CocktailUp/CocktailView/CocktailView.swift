@@ -23,19 +23,16 @@ struct CocktailView: View {
                         ForEach(viewModel.drinks.drinks, id: \.self) { drink in
                             VStack {
                                 NavigationLink(destination: DetailCocktailView(drink: drink).environmentObject(viewModel)) {
-                                    CocktailRow(title: drink.strDrink, subtitle: drink.strCategory ?? "", imageUrl: "\(drink.strDrinkThumb)/preview")
-                                }.foregroundColor(.black)
+                                    CocktailRow(title: drink.strDrink, subtitle: drink.strCategory, imageUrl: "\(drink.strDrinkThumb)/preview")
+                                }
+                                .foregroundColor(.black)
                             }
                         }
                         .listStyle(.plain)
                         .padding()
                     }
-
                 }
             }
-        }
-        .onAppear {
-            viewModel.fetchCocktails(searchText: nil, url: getCocktailByNameURL)
         }
         .searchable(text: $viewModel.searchText, prompt: "searchBar_placeholder")
     }

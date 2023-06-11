@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TopDetailView: View {
     let imageUrlDrink: String
+
     var body: some View {
         AsyncImage(url: URL(string: imageUrlDrink)) { phase in
             switch phase {

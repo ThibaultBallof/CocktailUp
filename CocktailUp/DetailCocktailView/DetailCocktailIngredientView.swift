@@ -9,9 +9,11 @@ import SwiftUI
 
 struct DetailCocktailIngredientView: View {
     var ingredients: [String: String]
+
     var body: some View {
         List(ingredients.sorted(by: <), id: \.key) { key, value  in
-           IngredientsRowView(ingregient: key, measure: value).listRowSeparator(.hidden)
+            IngredientsRowView(ingregient: key, measure: value)
+                .listRowSeparator(.hidden)
         }
         .listStyle(.plain)
     }

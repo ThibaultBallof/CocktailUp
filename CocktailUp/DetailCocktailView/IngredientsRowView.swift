@@ -10,6 +10,7 @@ import SwiftUI
 struct IngredientsRowView: View {
     let ingregient: String
     let measure: String
+
     var body: some View {
         HStack {
             Text(ingregient)

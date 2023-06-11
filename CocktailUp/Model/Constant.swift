@@ -10,16 +10,13 @@ import Foundation
 let getCocktailByNameURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
 let getRandomCocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 let pathAlcoholURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i="
-let pathNonAlcoholURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
-let pathAlcoholImageURL = "https://www.thecocktaildb.com/images/ingredients/"
-let pathCocktailByID = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
 
 enum ButtonSelected {
     case instruction, ingredient
 }
 
 enum DataMock {
-    case goodData, badData
+    case goodData, badData, emptyData
 }
 
 enum Alcohol {
@@ -45,3 +42,5 @@ enum Alcohol {
 
     }
 }
+
+let drinkExample = Drink(idDrink: "1", strDrink: "Mojito", strTags: "", strCategory: "Alcohol", strInstructions: "Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.", strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg", strIngredient1: "", strIngredient2: "", strIngredient3: "", strIngredient4: "", strIngredient5: "", strIngredient6: "", strIngredient7: "", strIngredient8: "", strIngredient9: "", strIngredient10: "", strIngredient11: "", strIngredient12: "", strIngredient13: "", strIngredient14: "", strIngredient15: "", strMeasure1: "", strMeasure2: "", strMeasure3: "", strMeasure4: "", strMeasure5: "", strMeasure6: "", strMeasure7: "", strMeasure8: "", strMeasure9: "", strMeasure10: "", strMeasure11: "", strMeasure12: "", strMeasure13: "", strMeasure14: "", strMeasure15: "")

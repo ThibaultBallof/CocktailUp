@@ -27,8 +27,8 @@ extension View {
     func addShadow() -> some View {
         self
             .background(RoundedRectangle(cornerRadius: 20)
-            .fill(Color.white)
-            .shadow(radius: 3))
+                .fill(Color.white)
+                .shadow(radius: 3))
     }
 
     @ViewBuilder func filterButton(isTouched: Bool) -> some View {

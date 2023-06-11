@@ -16,7 +16,7 @@ struct HelpShakeView: View {
             LottieView(name: "shake-phone").onShake {
                 dismiss()
             }
-                .frame(width: 300, height: 300)
+            .frame(width: 300, height: 300)
             Text("shake_view_help_string")
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
@@ -29,9 +29,9 @@ struct HelpShakeView: View {
                     .fill(.red)
                     .frame(width: 42)
                     .overlay {
-                    Image(systemName: "xmark")
-                        .foregroundColor(.white)
-                        .font(.system(size: 20))
+                        Image(systemName: "xmark")
+                            .foregroundColor(.white)
+                            .font(.system(size: 20))
 
                     }
             }

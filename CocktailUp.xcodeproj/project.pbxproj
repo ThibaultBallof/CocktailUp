@@ -22,7 +22,6 @@
 		6322259F2A338D0A00810529 /* drink.json in Resources */ = {isa = PBXBuildFile; fileRef = 6322259E2A338D0A00810529 /* drink.json */; };
 		632225A32A338DFC00810529 /* ClearBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632225A22A338DFC00810529 /* ClearBackground.swift */; };
 		632225A52A338ED100810529 /* HelpShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632225A42A338ED100810529 /* HelpShakeView.swift */; };
-		632225AB2A33A09E00810529 /* IsScrolling in Frameworks */ = {isa = PBXBuildFile; productRef = 632225AA2A33A09E00810529 /* IsScrolling */; };
 		632225AE2A34D7C200810529 /* GoodMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 632225AD2A34D7C200810529 /* GoodMock.json */; };
 		632225B02A34E00500810529 /* EmptyMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 632225AF2A34E00500810529 /* EmptyMock.json */; };
 		632225B22A34E6A500810529 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632225B12A34E6A500810529 /* ErrorView.swift */; };
@@ -41,17 +40,12 @@
 		6331EA8E2A30D8C600FD873F /* CocktailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331EA8D2A30D8C600FD873F /* CocktailView.swift */; };
 		6331EA902A30DDD300FD873F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331EA8F2A30DDD300FD873F /* Constant.swift */; };
 		6331EA932A30E52300FD873F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331EA922A30E52300FD873F /* Modifiers.swift */; };
+		63BF7BCD2A35C47400C6D711 /* BadMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 63BF7BCC2A35C47400C6D711 /* BadMock.json */; };
+		63BF7BD72A36176900C6D711 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BF7BD62A36176900C6D711 /* MockService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		6331EA652A2F971C00FD873F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6331EA4C2A2F971A00FD873F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6331EA532A2F971A00FD873F;
-			remoteInfo = CocktailUp;
-		};
-		6331EA6F2A2F971C00FD873F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6331EA4C2A2F971A00FD873F /* Project object */;
 			proxyType = 1;
@@ -88,7 +82,6 @@
 		6331EA5E2A2F971C00FD873F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6331EA642A2F971C00FD873F /* CocktailUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocktailUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6331EA682A2F971C00FD873F /* CocktailUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailUpTests.swift; sourceTree = "<group>"; };
-		6331EA6E2A2F971C00FD873F /* CocktailUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocktailUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6331EA852A2F9B4100FD873F /* NetworkServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicing.swift; sourceTree = "<group>"; };
 		6331EA872A2FA49F00FD873F /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		6331EA892A2FA8B300FD873F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -97,6 +90,8 @@
 		6331EA8F2A30DDD300FD873F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6331EA922A30E52300FD873F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		6369E3C62A3322630015287B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		63BF7BCC2A35C47400C6D711 /* BadMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BadMock.json; sourceTree = "<group>"; };
+		63BF7BD62A36176900C6D711 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,19 +99,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				632225AB2A33A09E00810529 /* IsScrolling in Frameworks */,
 				632225942A3369E100810529 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6331EA612A2F971C00FD873F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6331EA6B2A2F971C00FD873F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,6 +153,7 @@
 			children = (
 				632225AD2A34D7C200810529 /* GoodMock.json */,
 				632225AF2A34E00500810529 /* EmptyMock.json */,
+				63BF7BCC2A35C47400C6D711 /* BadMock.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -184,7 +172,6 @@
 			children = (
 				6331EA542A2F971A00FD873F /* CocktailUp.app */,
 				6331EA642A2F971C00FD873F /* CocktailUpTests.xctest */,
-				6331EA6E2A2F971C00FD873F /* CocktailUpUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,7 +179,7 @@
 		6331EA562A2F971A00FD873F /* CocktailUp */ = {
 			isa = PBXGroup;
 			children = (
-				632225AC2A34D7AA00810529 /* Mock */,
+				63BF7BD52A35CCB400C6D711 /* ErrorView */,
 				6322258D2A3363E300810529 /* ShakeView */,
 				6322257A2A33274D00810529 /* DetailCocktailView */,
 				6369E3C62A3322630015287B /* Info.plist */,
@@ -205,7 +192,6 @@
 				6331EA592A2F971A00FD873F /* ContentView.swift */,
 				6331EA5B2A2F971C00FD873F /* Assets.xcassets */,
 				6331EA5D2A2F971C00FD873F /* Preview Content */,
-				632225B12A34E6A500810529 /* ErrorView.swift */,
 				632225B82A35B7BD00810529 /* Localizable.strings */,
 			);
 			path = CocktailUp;
@@ -257,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				6331EA852A2F9B4100FD873F /* NetworkServicing.swift */,
+				63BF7BD62A36176900C6D711 /* MockService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -264,12 +251,21 @@
 		6331EA912A30E51600FD873F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				632225AC2A34D7AA00810529 /* Mock */,
 				632225952A336A8500810529 /* Animation */,
 				6331EA922A30E52300FD873F /* Modifiers.swift */,
 				6322258E2A3368BB00810529 /* Extension+Shake.swift */,
 				632225A22A338DFC00810529 /* ClearBackground.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		63BF7BD52A35CCB400C6D711 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				632225B12A34E6A500810529 /* ErrorView.swift */,
+			);
+			path = ErrorView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +287,6 @@
 			name = CocktailUp;
 			packageProductDependencies = (
 				632225932A3369E100810529 /* Lottie */,
-				632225AA2A33A09E00810529 /* IsScrolling */,
 			);
 			productName = CocktailUp;
 			productReference = 6331EA542A2F971A00FD873F /* CocktailUp.app */;
@@ -315,24 +310,6 @@
 			productReference = 6331EA642A2F971C00FD873F /* CocktailUpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6331EA6D2A2F971C00FD873F /* CocktailUpUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6331EA7E2A2F971C00FD873F /* Build configuration list for PBXNativeTarget "CocktailUpUITests" */;
-			buildPhases = (
-				6331EA6A2A2F971C00FD873F /* Sources */,
-				6331EA6B2A2F971C00FD873F /* Frameworks */,
-				6331EA6C2A2F971C00FD873F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6331EA702A2F971C00FD873F /* PBXTargetDependency */,
-			);
-			name = CocktailUpUITests;
-			productName = CocktailUpUITests;
-			productReference = 6331EA6E2A2F971C00FD873F /* CocktailUpUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -350,10 +327,6 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 6331EA532A2F971A00FD873F;
 					};
-					6331EA6D2A2F971C00FD873F = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 6331EA532A2F971A00FD873F;
-					};
 				};
 			};
 			buildConfigurationList = 6331EA4F2A2F971A00FD873F /* Build configuration list for PBXProject "CocktailUp" */;
@@ -367,7 +340,6 @@
 			mainGroup = 6331EA4B2A2F971A00FD873F;
 			packageReferences = (
 				632225922A3369E100810529 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				632225A92A33A09E00810529 /* XCRemoteSwiftPackageReference "IsScrolling" */,
 			);
 			productRefGroup = 6331EA552A2F971A00FD873F /* Products */;
 			projectDirPath = "";
@@ -375,7 +347,6 @@
 			targets = (
 				6331EA532A2F971A00FD873F /* CocktailUp */,
 				6331EA632A2F971C00FD873F /* CocktailUpTests */,
-				6331EA6D2A2F971C00FD873F /* CocktailUpUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -387,6 +358,7 @@
 			files = (
 				632225B62A34F55100810529 /* not-found.json in Resources */,
 				632225B02A34E00500810529 /* EmptyMock.json in Resources */,
+				63BF7BCD2A35C47400C6D711 /* BadMock.json in Resources */,
 				632225AE2A34D7C200810529 /* GoodMock.json in Resources */,
 				632225B52A34F55100810529 /* error-cocktail.json in Resources */,
 				632225B92A35B7BD00810529 /* Localizable.strings in Resources */,
@@ -398,13 +370,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6331EA622A2F971C00FD873F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6331EA6C2A2F971C00FD873F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,6 +414,7 @@
 				6331EA8E2A30D8C600FD873F /* CocktailView.swift in Sources */,
 				632225882A335EEA00810529 /* DetailBottomView.swift in Sources */,
 				6322257C2A33276900810529 /* DetailCocktailView.swift in Sources */,
+				63BF7BD72A36176900C6D711 /* MockService.swift in Sources */,
 				632225A52A338ED100810529 /* HelpShakeView.swift in Sources */,
 				6331EA5A2A2F971A00FD873F /* ContentView.swift in Sources */,
 				632225912A33691B00810529 /* ShakeView.swift in Sources */,
@@ -471,13 +437,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6331EA6A2A2F971C00FD873F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -485,11 +444,6 @@
 			isa = PBXTargetDependency;
 			target = 6331EA532A2F971A00FD873F /* CocktailUp */;
 			targetProxy = 6331EA652A2F971C00FD873F /* PBXContainerItemProxy */;
-		};
-		6331EA702A2F971C00FD873F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6331EA532A2F971A00FD873F /* CocktailUp */;
-			targetProxy = 6331EA6F2A2F971C00FD873F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -632,9 +586,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thibaultballof.CocktailUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -662,9 +619,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thibaultballof.CocktailUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -708,42 +668,6 @@
 			};
 			name = Release;
 		};
-		6331EA7F2A2F971C00FD873F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TLQ3VSD323;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thibaultballof.CocktailUpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CocktailUp;
-			};
-			name = Debug;
-		};
-		6331EA802A2F971C00FD873F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TLQ3VSD323;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thibaultballof.CocktailUpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CocktailUp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -774,15 +698,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6331EA7E2A2F971C00FD873F /* Build configuration list for PBXNativeTarget "CocktailUpUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6331EA7F2A2F971C00FD873F /* Debug */,
-				6331EA802A2F971C00FD873F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -794,14 +709,6 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		632225A92A33A09E00810529 /* XCRemoteSwiftPackageReference "IsScrolling" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/fatbobman/IsScrolling";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -809,11 +716,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 632225922A3369E100810529 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
-		};
-		632225AA2A33A09E00810529 /* IsScrolling */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 632225A92A33A09E00810529 /* XCRemoteSwiftPackageReference "IsScrolling" */;
-			productName = IsScrolling;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

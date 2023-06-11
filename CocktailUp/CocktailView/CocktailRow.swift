@@ -20,7 +20,8 @@ struct CocktailRow: View {
                         .frame(width: 70, height: 70)
                         .cornerRadius(15)
                 } else if phase.error != nil {
-                    Image(systemName: "square.and.arrow.up.circle.fill")
+                    Image("cocktail-placeholder")
+                        .frame(width: 70, height: 70)
                 } else {
                     ProgressView()
                         .font(.largeTitle)
@@ -35,8 +36,8 @@ struct CocktailRow: View {
                     .fontWeight(.light)
             }
             Spacer()
-        }.addShadow()
-
+        }
+        .addShadow()
     }
 }
 

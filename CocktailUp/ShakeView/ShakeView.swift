@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ShakeView: View {
-
     @EnvironmentObject var viewModel: ViewModel
     @State private var isShowingDetailView = false
     @State private var isShowingHelpView = false
+
     var body: some View {
         VStack {
             Text("shake_view_description")

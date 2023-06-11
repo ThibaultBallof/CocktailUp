@@ -14,7 +14,7 @@ final class ViewModelTests: XCTestCase {
     func testFetchCocktails() {
         let expectation = XCTestExpectation(description: "Fetch cocktails")
         let searchText = "test"
-        let url = "https://example.com/api/cocktails"
+        let url = "https://google.com"
 
         let service = MockSevice()
         service.dataMock = .goodData
@@ -31,13 +31,13 @@ final class ViewModelTests: XCTestCase {
         wait(for: [expectation], timeout: 2.0)
     }
 
-    func testFetchCocktailsWithBadData() {
+    func testFetchCocktailsWithEmptyData() {
         let expectation = XCTestExpectation(description: "Fetch cocktails")
         let searchText = "test"
-        let url = "https://example.com/api/cocktails"
+        let url = "https://google.com"
 
         let service = MockSevice()
-        service.dataMock = .badData
+        service.dataMock = .emptyData
         let viewModel = ViewModel(service: service)
 
         viewModel.fetchCocktails(searchText: searchText, url: url)
@@ -50,10 +50,31 @@ final class ViewModelTests: XCTestCase {
         wait(for: [expectation], timeout: 2.0)
     }
 
+    func testFetchCocktailsWithBadData() {
+        let expectation = XCTestExpectation(description: "Fetch cocktails")
+        let searchText = "test"
+        let url = "https://google.com"
+
+        let service = MockSevice()
+        service.dataMock = .badData
+        let viewModel = ViewModel(service: service)
+
+        viewModel.fetchCocktails(searchText: searchText, url: url)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertNotEqual(viewModel.drinks.drinks.first?.idDrink, "11007")
+            XCTAssertNotNil(viewModel.error)
+
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 2.0)
+    }
+
     func testFetchCocktailsWithNetworkError() {
         let expectation = XCTestExpectation(description: "Fetch cocktails with network error")
         let searchText = "test"
-        let url = "https://example.com/api/cocktails"
+        let url = "https://google.com"
 
         let service = MockServiceWithNetworkError()
         let viewModel = ViewModel(service: service)
@@ -70,8 +91,6 @@ final class ViewModelTests: XCTestCase {
 
     func testFetchRandomCocktails() {
         let expectation = XCTestExpectation(description: "Fetch cocktails")
-        let searchText = "test"
-        let url = "https://example.com/api/cocktails"
 
         let service = MockSevice()
         service.dataMock = .goodData
@@ -91,10 +110,29 @@ final class ViewModelTests: XCTestCase {
     func testFetchRandomCocktailsWithBadData() {
         let expectation = XCTestExpectation(description: "Fetch cocktails")
         let searchText = "test"
-        let url = "https://example.com/api/cocktails"
+        let url = "https://google.com"
 
         let service = MockSevice()
         service.dataMock = .badData
+        let viewModel = ViewModel(service: service)
+
+        viewModel.fetchCocktails(searchText: searchText, url: url)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertNotEqual(viewModel.drinks.drinks.first?.idDrink, "11007")
+            XCTAssertNotNil(viewModel.error)
+
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 2.0)
+    }
+
+    func testFetchRandomCocktailsWithEmptyData() {
+        let expectation = XCTestExpectation(description: "Fetch cocktails")
+
+        let service = MockSevice()
+        service.dataMock = .emptyData
         let viewModel = ViewModel(service: service)
 
         viewModel.fetchRandomCocktail()
@@ -109,8 +147,6 @@ final class ViewModelTests: XCTestCase {
 
     func testFetchRandomCocktailsWithNetworkError() {
         let expectation = XCTestExpectation(description: "Fetch cocktails with network error")
-        let searchText = "test"
-        let url = "https://example.com/api/cocktails"
 
         let service = MockServiceWithNetworkError()
         let viewModel = ViewModel(service: service)

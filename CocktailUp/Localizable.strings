@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  CocktailUp
+
+  Created by Thibault Ballof on 11/06/2023.
+  
+*/
+
+"shake_view_description" = "Unlock the thrill of mixology with our exciting random cocktail discovery feature!";
+"shake_view_help_string" = "Shake up your cocktail adventure with a twist! Discover random concoctions by simply shaking your phone.";
+
+"insctruction" = "Insctruction";
+"ingredient" = "Ingredient";
+
+"searchBar_placeholder" = "Search for a cocktail";
+
+"url_error" = "Oops! It seems we've stirred up a cocktail blunder. But fear not, we're on the case to fix it and ensure your next sip is pure perfection!"; "error-cocktail";
+"decoding_error" = "Oops! It seems our mixologists are still searching for the perfect concoction. Don't despair, we won't stop shaking things up until we serve you an extraordinary cocktail experience!";
+"unknow_error" = "An unknown error occurred";
+
+

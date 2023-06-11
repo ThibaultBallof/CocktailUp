@@ -9,7 +9,6 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-
     @StateObject var viewModel = ViewModel()
 
     var body: some View {
@@ -22,6 +21,8 @@ struct ContentView: View {
                     .tabItem {
                         Image("shaker")
                     }
+            }.onAppear {
+                viewModel.fetchCocktails(searchText: nil, url: getCocktailByNameURL)
             }
     }
 }

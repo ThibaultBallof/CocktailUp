@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct DetailBottomView: View {
-
     @EnvironmentObject var viewModel: ViewModel
     let drink: Drink
 
     var body: some View {
-        ButtonView().padding().environmentObject(viewModel)
+        ButtonView()
+            .padding()
+            .environmentObject(viewModel)
         if viewModel.selectedButton == .instruction {
             DetailCocktailListView(inscruction: drink.strInstructions)
         } else {
