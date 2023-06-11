@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+
+    @StateObject var viewModel = ViewModel()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+            TabView {
+                CocktailView().environmentObject(viewModel)
+                    .tabItem {
+                        Image("cocktail")
+                    }
+                ShakeView().environmentObject(viewModel)
+                    .tabItem {
+                        Image("shaker")
+                    }
+            }
     }
 }
 
